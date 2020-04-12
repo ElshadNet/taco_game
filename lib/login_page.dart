@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   TextEditingController emailController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -80,8 +82,15 @@ class _LoginPageState extends State<LoginPage> {
                child: Center(
                  child: FlatButton(
                    child: Text("Login As Demo"),
-                   onPressed: ()  {
-                      print("Domo Users");
+                   onPressed: () async{
+                     
+                      dynamic user = await signInDemo();
+                      if(user!=null){ 
+                        print(user);
+                      }
+                      else{
+                        print("Error");
+                      }
                     },
                    ),
                ),
@@ -91,5 +100,16 @@ class _LoginPageState extends State<LoginPage> {
       ),
       
     );
+  }
+
+ Future signInDemo() async{
+   try{
+    AuthResult rs = await _auth.signInAnonymously();
+    FirebaseUser user = rs.user;
+    return user;
+   }catch(e){
+     print(e.toString());
+   }
+
   }
 }
