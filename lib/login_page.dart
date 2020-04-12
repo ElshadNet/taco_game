@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'user.dart';
+import 'home.dart';
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  FirebaseAuth _auth = FirebaseAuth.instance;
   TextEditingController emailController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -83,15 +85,15 @@ class _LoginPageState extends State<LoginPage> {
                  child: FlatButton(
                    child: Text("Login As Demo"),
                    onPressed: () async{
-                     
-                      dynamic user = await signInDemo();
-                      if(user!=null){ 
-                        print(user);
-                      }
-                      else{
-                        print("Error");
-                      }
-                    },
+                      dynamic user = await signInAsDemo();
+                        if(user!=null){
+                          print(user.userID);
+                      
+                        }
+                        else{
+                          print("Sign in As Demo have some error");
+                        }
+                      },
                    ),
                ),
              ),
@@ -102,14 +104,18 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
- Future signInDemo() async{
-   try{
-    AuthResult rs = await _auth.signInAnonymously();
-    FirebaseUser user = rs.user;
-    return user;
-   }catch(e){
-     print(e.toString());
-   }
+  Future signInAsDemo() async{
+       try{
+        AuthResult rs   =  await _auth.signInAnonymously();
+        FirebaseUser user = rs.user;
+        return User(userID: user.uid);
+       }
+       catch(errer){
+          print(errer.toString());
+          return null;
+       }
 
   }
+  
+
 }
