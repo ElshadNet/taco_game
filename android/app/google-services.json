@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "490160065052",
+    "firebase_url": "https://taco-game-53701.firebaseio.com",
+    "project_id": "taco-game-53701",
+    "storage_bucket": "taco-game-53701.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490160065052:android:bef41944b05c9acad7add9",
+        "android_client_info": {
+          "package_name": "com.elshadnet.taco_game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490160065052-0n6q1q9f95t568ad81c60nun1ruhnvkh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3sRWX8m5ChxFNlE6eraTMs_qMCXQpxyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490160065052-0n6q1q9f95t568ad81c60nun1ruhnvkh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
