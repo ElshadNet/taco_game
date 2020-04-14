@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'firebase_actions.dart';
 import 'user.dart';
 import 'home.dart';
 class LoginPage extends StatefulWidget {
@@ -8,6 +9,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  //FirebaseActions fa = FirebaseActions();
   FirebaseAuth _auth = FirebaseAuth.instance;
   TextEditingController emailController = new TextEditingController();
   @override
@@ -85,11 +87,9 @@ class _LoginPageState extends State<LoginPage> {
                  child: FlatButton(
                    child: Text("Login As Demo"),
                    onPressed: () async{
-                      dynamic user = await signInAsDemo();
+                      dynamic user = await FirebaseActions().signInAsDemo();
                         if(user!=null){
                           print(user.userID);
-                          Navigator.push(context, 
-                          MaterialPageRoute(builder: (context)=> Home()));
                         }
                         else{
                           print("Sign in As Demo have some error");
@@ -105,18 +105,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Future signInAsDemo() async{
-       try{
-        AuthResult rs   =  await _auth.signInAnonymously();
-        FirebaseUser user = rs.user;
-        return User(userID: user.uid);
-       }
-       catch(errer){
-          print(errer.toString());
-          return null;
-       }
 
-  }
   
 
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taco_game/login_page.dart';
+import 'firebase_actions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 class Home extends StatefulWidget {
   @override
@@ -18,9 +19,8 @@ class _HomeState extends State<Home> {
             icon: Icon(Icons.exit_to_app),
             onPressed: () async{
               print("Logout");
-              await signOut();
-              Navigator.push(context, 
-              MaterialPageRoute(builder: (context)=> LoginPage()));
+              await FirebaseActions().signOut();
+
             },
           ),
         ],
@@ -28,7 +28,5 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Future signOut() async{
-     return await _auth.signOut();
-  }
+
 }
