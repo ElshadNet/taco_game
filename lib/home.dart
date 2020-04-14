@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'firebase_actions.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
