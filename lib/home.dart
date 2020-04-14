@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:taco_game/login_page.dart';
 import 'firebase_actions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 class Home extends StatefulWidget {
