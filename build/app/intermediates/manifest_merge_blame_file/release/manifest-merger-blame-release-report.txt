@@ -1,0 +1,155 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.elshadnet.taco_game"
+4    android:versionCode="4001"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml
+10    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+11    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\43d350ad09cabd5f03c8e95a99e4ae77\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:5-79
+12-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\43d350ad09cabd5f03c8e95a99e4ae77\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:22-76
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\43d350ad09cabd5f03c8e95a99e4ae77\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:14:5-67
+13-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\43d350ad09cabd5f03c8e95a99e4ae77\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:14:22-64
+14    <!--
+15 io.flutter.app.FlutterApplication is an android.app.Application that
+16         calls FlutterMain.startInitialization(this); in its onCreate method.
+17         In most cases you can leave this as-is, but you if you want to provide
+18         additional functionality it is fine to subclass or reimplement
+19         FlutterApplication and put your custom class here.
+20    -->
+21    <application
+21-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:8:5-29:19
+22        android:name="io.flutter.app.FlutterApplication"
+22-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:9:9-57
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.0.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\c1da7862c7abb8e426855a3f78caf221\core-1.0.0\AndroidManifest.xml:22:18-86
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:11:9-43
+25        android:label="taco_game" >
+25-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:10:9-34
+26        <activity
+26-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:12:9-23:20
+27            android:name="com.elshadnet.taco_game.MainActivity"
+27-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:13:13-41
+28            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+28-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:16:13-163
+29            android:hardwareAccelerated="true"
+29-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:17:13-47
+30            android:launchMode="singleTop"
+30-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:14:13-43
+31            android:theme="@style/LaunchTheme"
+31-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:15:13-47
+32            android:windowSoftInputMode="adjustResize" >
+32-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:18:13-55
+33            <intent-filter>
+33-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:19:13-22:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:20:17-68
+34-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:20:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:21:17-76
+36-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:21:27-74
+37            </intent-filter>
+38        </activity>
+39        <!--
+40             Don't delete the meta-data below.
+41             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+42        -->
+43        <meta-data
+43-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:26:9-28:33
+44            android:name="flutterEmbedding"
+44-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:27:13-44
+45            android:value="2" />
+45-->C:\Users\SHAD\taco_game\android\app\src\main\AndroidManifest.xml:28:13-30
+46
+47        <service
+47-->[:firebase_auth] C:\Users\SHAD\taco_game\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+48            android:name="com.google.firebase.components.ComponentDiscoveryService"
+48-->[:firebase_auth] C:\Users\SHAD\taco_game\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:8:18-89
+49            android:directBootAware="true"
+49-->[com.google.firebase:firebase-common:19.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\cf271d737a4b3367193428c4f3eb3118\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+50            android:exported="false" >
+50-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:35:13-37
+51            <meta-data
+51-->[:firebase_auth] C:\Users\SHAD\taco_game\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
+52                android:name="com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar"
+52-->[:firebase_auth] C:\Users\SHAD\taco_game\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:10:17-122
+53                android:value="com.google.firebase.components.ComponentRegistrar" />
+53-->[:firebase_auth] C:\Users\SHAD\taco_game\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
+54            <meta-data
+54-->[:cloud_firestore] C:\Users\SHAD\taco_game\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
+55                android:name="com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar"
+55-->[:cloud_firestore] C:\Users\SHAD\taco_game\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:10:17-133
+56                android:value="com.google.firebase.components.ComponentRegistrar" />
+56-->[:cloud_firestore] C:\Users\SHAD\taco_game\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
+57            <meta-data
+57-->[:firebase_core] C:\Users\SHAD\taco_game\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
+58                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar"
+58-->[:firebase_core] C:\Users\SHAD\taco_game\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:10:17-123
+59                android:value="com.google.firebase.components.ComponentRegistrar" />
+59-->[:firebase_core] C:\Users\SHAD\taco_game\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
+60            <meta-data
+60-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:36:13-38:85
+61                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+61-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:37:17-109
+62                android:value="com.google.firebase.components.ComponentRegistrar" />
+62-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:38:17-82
+63            <meta-data
+63-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\43d350ad09cabd5f03c8e95a99e4ae77\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:20:13-22:85
+64                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+64-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\43d350ad09cabd5f03c8e95a99e4ae77\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:21:17-111
+65                android:value="com.google.firebase.components.ComponentRegistrar" />
+65-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\43d350ad09cabd5f03c8e95a99e4ae77\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:22:17-82
+66        </service>
+67
+68        <activity
+68-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:24:9-31:50
+69            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+69-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:25:13-85
+70            android:excludeFromRecents="true"
+70-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:26:13-46
+71            android:exported="true"
+71-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:27:13-36
+72            android:launchMode="singleTask"
+72-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:28:13-44
+73            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+73-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:29:13-102
+74            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+74-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\a83bb62cb43b672cf00b874e0ee6110c\firebase-auth-19.2.0\AndroidManifest.xml:30:13-72
+75        <activity
+75-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\6eb14f512292913515d869914807ad40\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+76            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+76-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\6eb14f512292913515d869914807ad40\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+77            android:exported="false"
+77-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\6eb14f512292913515d869914807ad40\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+78            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+78-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\6eb14f512292913515d869914807ad40\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+79
+80        <provider
+80-->[com.google.firebase:firebase-common:19.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\cf271d737a4b3367193428c4f3eb3118\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+81            android:name="com.google.firebase.provider.FirebaseInitProvider"
+81-->[com.google.firebase:firebase-common:19.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\cf271d737a4b3367193428c4f3eb3118\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+82            android:authorities="com.elshadnet.taco_game.firebaseinitprovider"
+82-->[com.google.firebase:firebase-common:19.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\cf271d737a4b3367193428c4f3eb3118\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+83            android:exported="false"
+83-->[com.google.firebase:firebase-common:19.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\cf271d737a4b3367193428c4f3eb3118\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+84            android:initOrder="100" />
+84-->[com.google.firebase:firebase-common:19.3.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\cf271d737a4b3367193428c4f3eb3118\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+85
+86        <meta-data
+86-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\5596bd176666ca6734929abc73b90b53\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+87            android:name="com.google.android.gms.version"
+87-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\5596bd176666ca6734929abc73b90b53\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+88            android:value="@integer/google_play_services_version" />
+88-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\SHAD\.gradle\caches\transforms-2\files-2.1\5596bd176666ca6734929abc73b90b53\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+89    </application>
+90
+91</manifest>

@@ -88,7 +88,8 @@ class _LoginPageState extends State<LoginPage> {
                       dynamic user = await signInAsDemo();
                         if(user!=null){
                           print(user.userID);
-                      
+                          Navigator.push(context, 
+                          MaterialPageRoute(builder: (context)=> Home()));
                         }
                         else{
                           print("Sign in As Demo have some error");
