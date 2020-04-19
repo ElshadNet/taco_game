@@ -11,6 +11,9 @@ class _LoginPageState extends State<LoginPage> {
   //FirebaseActions fa = FirebaseActions();
   FirebaseAuth _auth = FirebaseAuth.instance;
   TextEditingController emailController = new TextEditingController();
+  TextEditingController passController = new TextEditingController();
+  String email = '';
+  String pass = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +28,13 @@ class _LoginPageState extends State<LoginPage> {
               padding: EdgeInsets.only(top: 10.0, bottom:10.0),
               child: TextField(
                 controller: emailController,
+                onChanged: (value){
+                  setState(() {
+                    email = value;
+                    print(email);
+                  });
+                  
+                },
                 decoration: InputDecoration(
                   hintText: "Email",
                   border: OutlineInputBorder(
@@ -36,7 +46,14 @@ class _LoginPageState extends State<LoginPage> {
             Padding(
               padding: EdgeInsets.only(top: 10.0, bottom:10.0),
               child: TextField(
-                controller: emailController,
+                controller: passController,
+                onChanged: (value){
+                  setState(() {
+                    pass = value;
+                    print(pass);
+                  });
+                  
+                },
                 decoration: InputDecoration(
                   hintText: "Password",
                   border: OutlineInputBorder(
@@ -57,8 +74,16 @@ class _LoginPageState extends State<LoginPage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
-                      onPressed: () {
+                      onPressed: () async{
                         print("Login");
+                         dynamic user = await FirebaseActions().signInWithEmail(email, pass);
+                         if(user!=null){
+                           print(user.userID);
+                         
+                         }
+                         else{
+                           print("Envaled Email OR Passord");
+                         }                       
 
                       },
                     ),
@@ -72,8 +97,16 @@ class _LoginPageState extends State<LoginPage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
-                      onPressed: (){
+                      onPressed: () async{
                         print("Sign Up");
+                        dynamic user = await FirebaseActions().regiterWithEmail(email, pass);
+                         if(user!=null){
+                           print(user.userID);
+                         }
+                         else{
+                           print("Registre Error");
+                         }
+
                       },
                     ),
                   ),
