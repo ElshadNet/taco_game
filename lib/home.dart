@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taco_game/firestore_actions.dart';
 import 'firebase_actions.dart';
 class Home extends StatefulWidget {
   @override
@@ -21,6 +22,12 @@ class _HomeState extends State<Home> {
             },
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: (){
+          FirestoreActions().insertNewGame("Game3", 20, "Model");
+        },
       ),
     );
   }
