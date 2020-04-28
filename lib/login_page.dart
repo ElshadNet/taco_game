@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'firebase_actions.dart';
 
 class LoginPage extends StatefulWidget {
@@ -9,7 +8,6 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   //FirebaseActions fa = FirebaseActions();
-  FirebaseAuth _auth = FirebaseAuth.instance;
   TextEditingController emailController = new TextEditingController();
   TextEditingController passController = new TextEditingController();
   String email = '';
